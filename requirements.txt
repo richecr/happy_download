@@ -1,0 +1,4 @@
+python-telegram-bot
+python-dotenv
+urllib3
+youtube-dl
