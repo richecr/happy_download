@@ -8,8 +8,8 @@ from utils import download_video, ydl_opts, tratar_url
 
 
 def start(update, context):
-    response_message = "Olá, queridx! Use o comando para nos enviar a \
-        URL do vídeo.\n"
+    response_message = "Olá, queridx! "
+    response_message += "Use o comando para nos enviar a URL do vídeo.\n"
     response_message += "Exemplo: /video <link>"
     context.bot.send_message(
         chat_id=update.message.chat_id,
@@ -23,8 +23,8 @@ def unknown(update, context):
     if "/video" in text:
         download(text, context, update)
     else:
-        response_message = "Comando inválido. Digite /start e veja \
-            como baixar um vídeo."
+        response_message = "Comando inválido. "
+        response_message += "Digite /start e veja como baixar um vídeo."
         context.bot.send_message(
             chat_id=update.message.chat_id,
             text=response_message
