@@ -1,10 +1,10 @@
 # Contributing
 > Pode contribuir a vontade, você será sempre bem-vindo(a). Mas temos algumas regras para serem seguidas.
 
-- [Adicionar/atualizar funcionalidades](#Adicionar/atualizar-funcionalidades)
+- [Adicionar/atualizar funcionalidades](#Adicionaratualizar-funcionalidades)
 - [Criando uma issue](#Criando-uma-issue)
 - [Clonar o repositório](#Clonar-o-repositório)
-- [Contribuir com implementação](Contribuir-com-implementação)
+- [Contribuir com implementação](#Contribuir-com-implementação)
 - [Realizando uma Pull Request - PR](#Realizando-uma-Pull-Request---PR)
 
 ## Adicionar/Atualizar funcionalidades
