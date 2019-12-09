@@ -4,12 +4,12 @@ import os
 
 from config.settings import TELEGRAM_TOKEN
 
-from utils import download_video, ydl_opts
+from utils import download_video, ydl_opts, tratar_url
 
 
 def start(update, context):
     response_message = "Olá, queridx! Use o comando para nos enviar a URL do vídeo.\n"
-    response_message += "Exemplo: /url https://www.youtube.com/watch?v=Jk1r0gswYes"
+    response_message += "Exemplo: /video <link>"
     context.bot.send_message(
         chat_id=update.message.chat_id,
         text=response_message
@@ -18,7 +18,17 @@ def start(update, context):
 @run_async
 def unknown(update, context):
     text = update['message']['text']
-    url = text.split("/url ")[1]
+    if "/video" in text:
+        download(text, context, update)
+    else:
+        response_message = "Comando inválido. Digite /start e veja como baixar um vídeo."
+        context.bot.send_message(
+            chat_id=update.message.chat_id,
+            text=response_message
+        )
+
+def download(text, context, update):
+    url = text.split("/video ")[1]
     url = tratar_url(url)
     filename = download_video(url)
     try:
@@ -31,15 +41,6 @@ def unknown(update, context):
     except Exception as e:
         print(e)
         pass
-
-
-def tratar_url(url):
-    url_test = url.split("https://youtu.be/")
-    if (len(url_test) == 1):
-        return url
-    elif (len(url_test) == 2):
-        url_ = "https://www.youtube.com/watch?v="+url_test[1]+"&feature=youtu.be"
-        return url_
 
 def main():
     updater = Updater(token=TELEGRAM_TOKEN, use_context=True)

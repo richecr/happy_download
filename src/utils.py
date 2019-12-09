@@ -20,3 +20,11 @@ def download_video(url):
     except Exception as e:
         print(e)
         pass
+
+def tratar_url(url):
+    url_test = url.split("https://youtu.be/")
+    if (len(url_test) == 1):
+        return url
+    elif (len(url_test) == 2):
+        url_ = "https://www.youtube.com/watch?v="+url_test[1]+"&feature=youtu.be"
+        return url_
