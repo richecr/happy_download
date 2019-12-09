@@ -8,12 +8,14 @@ from utils import download_video, ydl_opts, tratar_url
 
 
 def start(update, context):
-    response_message = "Olá, queridx! Use o comando para nos enviar a URL do vídeo.\n"
+    response_message = "Olá, queridx! Use o comando para nos enviar a \
+        URL do vídeo.\n"
     response_message += "Exemplo: /video <link>"
     context.bot.send_message(
         chat_id=update.message.chat_id,
         text=response_message
     )
+
 
 @run_async
 def unknown(update, context):
@@ -21,11 +23,13 @@ def unknown(update, context):
     if "/video" in text:
         download(text, context, update)
     else:
-        response_message = "Comando inválido. Digite /start e veja como baixar um vídeo."
+        response_message = "Comando inválido. Digite /start e veja \
+            como baixar um vídeo."
         context.bot.send_message(
             chat_id=update.message.chat_id,
             text=response_message
         )
+
 
 def download(text, context, update):
     url = text.split("/video ")[1]
@@ -41,6 +45,7 @@ def download(text, context, update):
     except Exception as e:
         print(e)
         pass
+
 
 def main():
     updater = Updater(token=TELEGRAM_TOKEN, use_context=True)
