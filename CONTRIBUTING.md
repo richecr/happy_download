@@ -1,4 +1,5 @@
 # Contributing
+
 > Pode contribuir a vontade, você será sempre bem-vindo(a). Mas temos algumas regras para serem seguidas.
 
 - [Adicionar/atualizar funcionalidades](#Adicionaratualizar-funcionalidades)
@@ -11,7 +12,7 @@
 
 Você olhou a aplicação e pensou em alguma funcionalidade que deveria ser adicionada no projeto ? :open_mouth:
 
-***Então, você tem duas opções:***
+**_Então, você tem duas opções:_**
 
 - [Abrir uma issue detalhando sua ideia](#criando-uma-issue)
 - [Você mesmo implementar a funcionalidade](#contribuir-com-implementação)
@@ -74,8 +75,9 @@ Consiga seu próprio [token de acesso](#como-conseguir-seu-token)
 Todo o código da aplicação se encontra na pasta `src`.
 
 - Na pasta de `config` estão todos os arquivos de configuração do projeto.
-    - No arquivo `.env` esta o token para conseguir utiliza o bot. Você deve ter seu próprio token.
-    - No arquivo `settings.py` estão as variáveis que serão importadas por outros arquivos.
+
+  - Você precisa criar um arquivo `.env`(igual o arquivo `.env-example`) e adicionar o token para conseguir utiliza o bot. Você deve ter seu próprio token.
+  - No arquivo `settings.py` estão as variáveis que serão importadas por outros arquivos.
 
 - Na raiz, o arquivo `utils` é onde fica as funções que serão utilizadas na aplicação, como: baixar um vídeo.
 
@@ -90,8 +92,6 @@ Utilize o comando: `/newbot` para criar um novo bot e siga os passos.
 No final o bot irá retornar um token de acesso, é esse token que você vai poder usar para testar suas funcionalidades.
 
 Copie esse token e cole no arquivo `.env` e então tudo passara a funcionar com esse bot que você criou.
-
-Sempre remova seu token ao realizar um commit.
 
 ### Realizar a PR
 

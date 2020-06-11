@@ -9,13 +9,13 @@ E então, você poderá pedir ao bot para que ele baixe um certo vídeo para voc
 
 ### Como mandar ele baixar um vídeo ?
 
-Simples, basta enviar a mensagem: `/url <link_do_vídeo>`.
+Simples, basta enviar a mensagem: `/video <link_do_vídeo>`.
 
 OBS: Sem os `<`, `>`.
 
 ## Comandos:
 
-|Comando   	        |O que faz ?   	|
-|---	              |---	          |
-|`/start`  	        |Avisa ao bot que alguém se comunicou com ele. Ele deve retornar uma mensagem explicando como usar o bot. |
-|`/url <link>` 	     |Permite que o usuário consiga mandar o bot baixar o vídeo e depois enviar de volta. |
+| Comando         | O que faz ?                                                                                              |
+| --------------- | -------------------------------------------------------------------------------------------------------- |
+| `/start`        | Avisa ao bot que alguém se comunicou com ele. Ele deve retornar uma mensagem explicando como usar o bot. |
+| `/video <link>` | Permite que o usuário consiga mandar o bot baixar o vídeo e depois enviar de volta.                      |
