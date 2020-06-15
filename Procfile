@@ -1,1 +1,1 @@
-web: python src/core.py
+worker: python src/core.py
